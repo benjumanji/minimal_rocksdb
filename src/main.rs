@@ -6,7 +6,7 @@ use rocksdb::rocksdb_ffi::DBCFHandle;
 fn get_or_create(opts: &Options, db: &mut DB) -> Result<DBCFHandle, String> {
     db.cf_handle("cf")
         .map(|x| -> Result<DBCFHandle, String> { Ok(*x) })
-        .unwrap_or_else(|| { db.create_cf("cf", &opts) })
+        .unwrap_or({ db.create_cf("cf", &opts) })
 }
 
 fn main() {
