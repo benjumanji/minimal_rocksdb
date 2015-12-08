@@ -1,0 +1,17 @@
+[package]
+name = "triplicate"
+version = "0.1.0"
+authors = ["Ben Edwards <ben.edwards@ontology.com>"]
+
+[dependencies]
+byteorder = "0.4"
+rand = "0.3"
+rocksdb = "0.2"
+
+#[lib]
+#name = "triplicate"
+#path = "src/lib.rs"
+
+[[bin]]
+name = "triplicate-server"
+path = "src/main.rs"
